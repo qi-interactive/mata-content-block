@@ -1,0 +1,20 @@
+{
+    "name": "mata/mata-content-block",
+    "description": "Manages blocks of HTML code for MATA",
+    "keywords": ["yii2", "mata-content-block", "HTML", "wysiwyg", "mata"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "codeception/codeception": "*",
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mata\\contentblock\\": ""
+        }
+    }
+}
