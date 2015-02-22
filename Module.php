@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace mata\modulemenu;
+namespace mata\contentblock;
 
 use mata\base\Module as BaseModule;
 
@@ -25,6 +25,6 @@ class Module extends BaseModule {
 	public $runBootstrap = true;
 
 	public function getNavigation() {
-		return "/contentBlock/contentBlock;
+		return "/contentBlock/contentBlock";
 	}
 }
