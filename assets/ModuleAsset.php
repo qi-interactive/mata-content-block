@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace mata\modulemenu\assets;
+namespace mata\contentblock\assets;
 
 use yii\web\AssetBundle;
 
@@ -15,7 +15,7 @@ use yii\web\AssetBundle;
  */
 class ModuleAsset extends AssetBundle
 {
-	public $sourcePath = '@vendor/mata/mata-module-menu/web';
+	public $sourcePath = '@vendor/mata/mata-content-block/web';
 
 	public $js = [
 	];

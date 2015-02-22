@@ -25,6 +25,6 @@ class Module extends BaseModule {
 	public $runBootstrap = true;
 
 	public function getNavigation() {
-		return "/contentBlock/contentBlock";
+		return "/mata-cms/contentBlock/content-block";
 	}
 }
