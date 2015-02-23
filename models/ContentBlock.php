@@ -12,12 +12,12 @@ use Yii;
  * @property string $Text
  * @property string $Region
  */
-class ContentBlock extends \yii\db\ActiveRecord {
+class ContentBlock extends \matacms\db\ActiveRecord {
     /**
      * @inheritdoc
      */
     public static function tableName() {
-        return 'contentblock';
+        return 'mata_contentblock';
     }
 
     /**
