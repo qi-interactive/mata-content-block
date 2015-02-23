@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use matacms\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model mata\contentblock\models\ContentBlock */
@@ -14,25 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Title')->textarea(['rows' => 6]) ?>
 
-
-    <?= yii\imperavi\Widget::widget([
-    // You can either use it for model attribute
-    'model' => $model,
-    'attribute' => 'Text',
-
-    // or just for input field
-    // 'name' => 'my_input_name',
-
-    // Some options, see http://imperavi.com/redactor/docs/
-    // 'options' => [
-        // 'toolbar' => false,
-        // 'css' => 'wym.css',
-    // ],
-]);
-
-?>
-
-    <?= $form->field($model, 'Text')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Text')->wysiwyg() ?>
 
     <?= $form->field($model, 'Region')->textInput(['maxlength' => 100]) ?>
 
