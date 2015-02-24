@@ -12,7 +12,7 @@ use matacms\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Title')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Title')->textInput(['rows' => 6]) ?>
 
     <?= $form->field($model, 'Text')->wysiwyg() ?>
 
