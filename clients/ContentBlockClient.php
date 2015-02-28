@@ -1,8 +1,8 @@
 <?php
 
-namespace mata\contentblock\clients;
+namespace matacms\contentblock\clients;
 
-use mata\contentblock\models\ContentBlock;
+use matacms\contentblock\models\ContentBlock;
 use yii\web\HttpException;
 use yii\web\NotFoundHttpException;
 

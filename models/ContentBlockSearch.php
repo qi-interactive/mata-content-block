@@ -1,11 +1,11 @@
 <?php
 
-namespace mata\contentblock\models;
+namespace matacms\contentblock\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use mata\contentblock\models\ContentBlock;
+use matacms\contentblock\models\ContentBlock;
 
 /**
  * ContentBlockSearch represents the model behind the search form about `mata\contentblock\models\ContentBlock`.

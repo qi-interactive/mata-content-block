@@ -1,7 +1,7 @@
 {
-    "name": "mata/mata-content-block",
-    "description": "Manages blocks of HTML code for MATA",
-    "keywords": ["yii2", "mata-content-block", "HTML", "wysiwyg", "mata"],
+    "name": "matacms/matacms-content-block",
+    "description": "Manages blocks of HTML code for MATACMS",
+    "keywords": ["yii2", "mata-content-block", "HTML", "wysiwyg", "mata-cms", "cms"],
     "type": "yii2-extension",
     "license": "MIT",
     "support": {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mata\\contentblock\\": ""
+            "matacms\\contentblock\\": ""
         }
     }
 }
