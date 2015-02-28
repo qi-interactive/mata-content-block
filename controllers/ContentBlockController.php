@@ -1,9 +1,9 @@
 <?php
 
-namespace mata\contentblock\controllers;
+namespace matacms\contentblock\controllers;
 
-use mata\contentblock\models\ContentBlock;
-use mata\contentblock\models\ContentBlockSearch;
+use matacms\contentblock\models\ContentBlock;
+use matacms\contentblock\models\ContentBlockSearch;
 use matacms\controllers\module\Controller;
 
 /**

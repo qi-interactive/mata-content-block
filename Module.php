@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace mata\contentblock;
+namespace matacms\contentblock;
 
 use mata\base\Module as BaseModule;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace mata\contentblock\models;
+namespace matacms\contentblock\models;
 
 use Yii;
 
