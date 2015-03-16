@@ -8,10 +8,7 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "codeception/codeception": "*",
-        "yiisoft/yii2-codeception": "*",
-        "yiisoft/yii2-faker": "*",
-        "asofter/yii2-imperavi-redactor": "dev-master"
+        "mata/mata-imperavi-redactor": "dev-development"
     },
     "autoload": {
         "psr-4": {
