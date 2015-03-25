@@ -37,6 +37,13 @@ class ContentBlockClient {
 		echo $this->getText($region);
 	}
 
+	public function renderTextWithoutOuterParagraph($region) {
+		$text = $this->getText($region);
+		$text = preg_replace('/<p>/i','', $text, 1);
+		$text = preg_replace('/<\/p>/i','', $text, -1);
+		echo $text;
+	}
+
 	// TO BASE
 	public function findModel($id) {
 
