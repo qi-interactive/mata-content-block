@@ -19,9 +19,7 @@ use matacms\widgets\ActiveForm;
     $disabledField = $model->isNewRecord ? [] : ['disabled' => 'disabled'];
     echo $form->field($model, 'Region')->textInput(array_merge(['maxlength' => 100], $disabledField)) ?>
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
+    <?= $form->submitButton() ?>
 
     <?php ActiveForm::end(); ?>
 
