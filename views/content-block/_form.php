@@ -21,7 +21,7 @@ use matacms\widgets\ActiveForm;
     echo $form->field($model, 'Region')->textInput(array_merge(['maxlength' => 100], $disabledField));
     ?>
 
-    <?= $form->submitButton() ?>
+    <?= $form->submitButton($model) ?>
 
     <?php ActiveForm::end(); ?>
 
