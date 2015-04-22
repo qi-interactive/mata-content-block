@@ -17,8 +17,8 @@ use matacms\widgets\ActiveForm;
     <?= $form->field($model, 'Text')->wysiwyg() ?>
 
     <?php
-    $disabledField = $model->isNewRecord ? [] : ['disabled' => 'disabled'];
-    echo $form->field($model, 'Region')->textInput(array_merge(['maxlength' => 100], $disabledField));
+    if ($model->isNewRecord)
+    	echo $form->field($model, 'Region')->textInput(array_merge(['maxlength' => 100]));
     ?>
 
     <?= $form->submitButton($model) ?>

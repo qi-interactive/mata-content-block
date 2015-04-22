@@ -25,7 +25,7 @@ class Module extends BaseModule {
 	public $runBootstrap = true;
 
 	public function getNavigation() {
-
+		return "/mata-cms/contentBlock/content-block";
 		$contentBlocks = \matacms\contentblock\models\ContentBlock::find()->all();
 		$navigation = [];
 		foreach ($contentBlocks as $contentBlock) {
