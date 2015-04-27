@@ -12,7 +12,7 @@ $module = \Yii::$app->getModule("environment");
 
 ?> 
 
-<div class="list-container row">
+<div class="list-container row <?= empty($model->filterableAttributes()) ? 'simple-list-container' : ''; ?>">
 	<?php if ($uri = $model->getVisualRepresentation()) { 
 		$thumbnailActiveClass = "thumbnail-active";
 		?>
