@@ -24,20 +24,7 @@ class Module extends BaseModule {
 
 	public $runBootstrap = true;
 
-
 	public function getNavigation() {
 		return "/mata-cms/contentBlock/content-block";
-		
-		// $contentBlocks = \matacms\contentblock\models\ContentBlock::find()->all();
-		// $navigation = [];
-		// foreach ($contentBlocks as $contentBlock) {
-		// 	$navigation[] = [
-		// 		'label' => $contentBlock->getLabel(),
-		// 		'url' => "/mata-cms/contentBlock/content-block/update?id=$contentBlock->Id",
-		// 		'icon' => "/images/module-icon.svg"
-		// 	];
-		// }
-		
-		// return $navigation;
 	}
 }
