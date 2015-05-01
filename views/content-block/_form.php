@@ -15,13 +15,13 @@ use matacms\widgets\ActiveForm;
     <?= $form->field($model, 'Title')->textInput(['rows' => 6]) ?>
 
     <?= $form->field($model, 'Text')->wysiwyg() ?>
-    <?php
-    $disabledField = $model->isNewRecord ? [] : ['disabled' => 'disabled'];
-    echo $form->field($model, 'Region')->textInput(array_merge(['maxlength' => 100], $disabledField)) ?>
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
+    <?php
+    if ($model->isNewRecord)
+    	echo $form->field($model, 'Region')->textInput(array_merge(['maxlength' => 100]));
+    ?>
+
+    <?= $form->submitButton($model) ?>
 
     <?php ActiveForm::end(); ?>
 

@@ -13,13 +13,6 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class ModuleAsset extends AssetBundle
-{
+class ModuleAsset extends AssetBundle {
 	public $sourcePath = '@vendor/matacms/matacms-content-block/web';
-
-	public $js = [
-	];
-
-	public $depends = [
-	];
 }

@@ -5,8 +5,9 @@ namespace matacms\contentblock\clients;
 use matacms\contentblock\models\ContentBlock;
 use yii\web\HttpException;
 use yii\web\NotFoundHttpException;
+use matacms\clients\SimpleClient;
 
-class ContentBlockClient {
+class ContentBlockClient extends SimpleClient {
 
 	/**
 	 * If set to false, exceptions will be thrown if a Content Block does not exist, and it's proprety is requested.
@@ -37,20 +38,12 @@ class ContentBlockClient {
 		echo $this->getText($region);
 	}
 
-	// TO BASE
-	public function findModel($id) {
-
-		$model = $this->getModel();
-
-		if (($model = $model::findOne($id)) !== null) {
-			return $model;
-		} else {
-			throw new NotFoundHttpException('The requested page does not exist.');
-		}
+	public function renderTextWithoutOuterParagraph($region) {
+		$text = $this->getText($region);
+		$text = preg_replace('/<p>/i','', $text, 1);
+		$text = preg_replace('/<\/p>/i','', $text, -1);
+		echo $text;
 	}
-
-	// TO BASE
-	// protected abstract function getModel();
 
 	protected function getModel() {
 		return new ContentBlock;

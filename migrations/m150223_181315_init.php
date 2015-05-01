@@ -17,7 +17,7 @@ use yii\db\Migration;
  */
 class m150223_181315_init extends Migration {
 
-	public function up() {
+	public function safeUp() {
 		$this->createTable('{{%mata_contentblock}}', [
 			'Id'                   => Schema::TYPE_PK,
 			'Title'             => Schema::TYPE_TEXT . '(128) NOT NULL',
@@ -26,7 +26,7 @@ class m150223_181315_init extends Migration {
 			]);
 	}
 
-	public function down() {
+	public function safeDown() {
 		$this->dropTable('{{%mata_contentblock}}');
 	}
 }

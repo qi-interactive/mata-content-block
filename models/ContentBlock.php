@@ -3,6 +3,7 @@
 namespace matacms\contentblock\models;
 
 use Yii;
+use mata\arhistory\behaviors\HistoryBehavior;
 
 /**
  * This is the model class for table "contentblock".
@@ -18,6 +19,12 @@ class ContentBlock extends \matacms\db\ActiveRecord {
      */
     public static function tableName() {
         return 'mata_contentblock';
+    }
+
+    public function behaviors() {
+        return [
+            HistoryBehavior::className(),
+        ];
     }
 
     /**
