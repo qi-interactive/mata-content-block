@@ -39,7 +39,7 @@ Echoes the result of ContentBlockClient::renderText($region).
 ```php
 public function renderTextWithoutOuterParagraph($region) {}
 ```
-Echoes the result of ContentBlockClient::renderText($region). It also removes the outer <p></p> pair of tags which are usually added by Imperavi Redactor
+Echoes the result of ContentBlockClient::renderText($region). It also removes the outer paragraph of tags which are usually added by Imperavi Redactor.
 
 
 Changelog
