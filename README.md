@@ -10,13 +10,13 @@ Content Block module allows adding blocks of HTML code into a web page.
 Installation
 ------------
 
-1. Add the module using composer: 
+- Add the module using composer: 
 
 ```json
 "matacms/matacms-content-block": "~1.0.0"
 ```
 
-2. Run migrations
+-  Run migrations
 ```
 php yii migrate/up vendor/matacms/matacms-content-block/migrations
 ```
