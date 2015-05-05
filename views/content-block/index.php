@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ModuleIndexAsset::register($this);
 
 $isRearrangable = isset($this->context->actions()['rearrange']);
+
 ?>
 <div class="content-block-index">
     <div class="content-block-top-bar">
@@ -33,8 +34,8 @@ $isRearrangable = isset($this->context->actions()['rearrange']);
                 <?php endif; ?>
 
                 <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-<!-- 
-                <div class="elements">
+
+<!--                 <div class="elements">
                     <?= Html::a(sprintf('Create %s', Yii::$app->controller->getModel()->getModelLabel()), ['create'], ['class' => 'btn btn-success']) ?>
                 </div> -->
             </div>
@@ -45,37 +46,86 @@ $isRearrangable = isset($this->context->actions()['rearrange']);
                 </div>
             </div>
         </div>
-        <div class="top-bar-sort-by-container">
-            <ul>
-                <li class="sort-by-label"> Sort by </li>
-                <li> Date Created </li>
-                <li> Category </li>
-                <li> Client </li>
+    </div>
+</div>
+<?php 
+
+$pjax = Pjax::begin([
+ "timeout" => 10000,
+ "scrollTo" => false
+ ]);
+
+ if (count($searchModel->filterableAttributes()) > 0):  ?>
+
+ <div class="content-block-index">
+     <div class="content-block-top-bar sort-by-wrapper">
+       <div class="top-bar-sort-by-container">
+           <ul>
+               <li class="sort-by-label"> Sort by </li>
+               <?php foreach ($searchModel->filterableAttributes() as $attribute): ?>
+                   <li> <?php
+                         // Sorting resets page count
+                    $link = $sort->link($attribute);
+                    echo preg_replace("/page=\d*/", "page=1", $link);
+                    ?> </li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>
 </div>
+<?php endif; ?>
+
+
+<div class="border"> </div>
 
 <?php
 
-Pjax::begin([
-    "timeout" => 10000
-    ]);
+
 
 echo ListView::widget([
     'dataProvider' => $dataProvider,
+    'id' => 'infinite-list-view',
     'itemView' => '_itemView',
-    'layout' => "{items}\n{pager}"
+    'layout' => "{items}\n{pager}",
+    'pager' => [
+    'class' => '\mata\widgets\InfiniteScrollPager\InfiniteScrollPager',
+    'clientOptions' => [
+    'pjax' => [
+    'id' => $pjax->options['id'],
+    ],
+    'listViewId' => 'infinite-list-view',
+    'itemSelector' => 'div[data-key]'
+    ]
+    ]
     ]); 
 
 Pjax::end();
+?>
 
-    ?>
+<?php 
+if ($isRearrangable)
+    echo $this->render('@vendor/matacms/matacms-base/views/module/_rearrange');
+?>
 
+<?php 
 
+if (count($searchModel->filterableAttributes()) > 0)
+    $this->registerJs('
+        $("#item-search").on("keyup", function() {
+            var attrs = ' . json_encode($searchModel->filterableAttributes()) . ';
+            var reqAttrs = []
+            var value = $(this).val();
+            $(attrs).each(function(i, attr) {
+                reqAttrs.push({
+                    "name" : "' . $searchModel->formName() . '[" + attr + "]",
+                    "value" : value
+                });
+});
 
-    <?php 
-    if($isRearrangable)
-        echo $this->render('@vendor/matacms/matacms-base/views/module/_rearrange');
-    ?>
+$.pjax.reload({container:"#w0", "url" : "?" + decodeURIComponent($.param(reqAttrs))});
+})
+');
+
+?>
+
 
