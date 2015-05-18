@@ -18,7 +18,7 @@ Installation
 
 -  Run migrations
 ```
-php yii migrate/up vendor/matacms/matacms-content-block/migrations
+php yii migrate/up --migrationPath=@vendor/matacms/matacms-content-block/migrations
 ```
 
 
@@ -57,3 +57,6 @@ Changelog
 ## 1.0.0-alpha, May 1, 2015
 
 - Initial release.
+ 
+## Future release
+- Updated installation notes
