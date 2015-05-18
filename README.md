@@ -53,3 +53,7 @@ Changelog
 ## 1.0.0-alpha, May 1, 2015
 
 - Initial release.
+
+
+## To be versioned
+- Added standard mata headers in PHP files
