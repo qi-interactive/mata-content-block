@@ -10,10 +10,6 @@ namespace matacms\contentblock\assets;
 
 use yii\web\AssetBundle;
 
-/**
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @since 2.0
- */
 class ModuleAsset extends AssetBundle {
 	public $sourcePath = '@vendor/matacms/matacms-content-block/web';
 }

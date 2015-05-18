@@ -1,13 +1,11 @@
 <?php
 
 use yii\helpers\Html;
-
 use matacms\theme\simple\assets\ListAsset;
 
 ListAsset::register($this);
 
 $moduleBaseUrl = sprintf("/mata-cms/%s/%s", $this->context->module->id, $this->context->id);
-
 $module = \Yii::$app->getModule("environment");
 
 ?> 
@@ -90,7 +88,3 @@ $module = \Yii::$app->getModule("environment");
 			}
 			?>></a>
 	</div>
-
-
-
-

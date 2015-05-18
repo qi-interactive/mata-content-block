@@ -2,5 +2,5 @@
     "name": "Content Block",
     "description": "Manages blocks of HTML code for MATA",
     "icon" : "/images/module-icon.svg",
-    "version" : "1.0.0-alpha"
+    "version" : "1.0.1-alpha"
 }

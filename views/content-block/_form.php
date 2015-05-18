@@ -3,9 +3,6 @@
 use yii\helpers\Html;
 use matacms\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model mata\contentblock\models\ContentBlock */
-/* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="content-block-form">
