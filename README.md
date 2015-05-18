@@ -55,5 +55,6 @@ Changelog
 - Initial release.
 
 
-## To be versioned
+## 1.0.1-alpha, May 18, 2015
 - Added standard mata headers in PHP files
+- Updated code style
