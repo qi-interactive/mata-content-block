@@ -50,6 +50,9 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 Changelog
 ---------
 
+## Future release
+- Updated installation notes
+
 ## 1.0.1-alpha, May 18, 2015
 - Added standard mata headers in PHP files
 - Updated code style
@@ -57,6 +60,3 @@ Changelog
 ## 1.0.0-alpha, May 1, 2015
 
 - Initial release.
- 
-## Future release
-- Updated installation notes
