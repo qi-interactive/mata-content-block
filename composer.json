@@ -8,7 +8,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "mata/mata-imperavi-redactor": "~1.0"
+        "mata/mata-imperavi-redactor": "~1.0.0"
     },
     "autoload": {
         "psr-4": {
