@@ -6,9 +6,9 @@
     "license": "MIT",
     "support": {
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "mata/mata-imperavi-redactor": "dev-development"
+        "mata/mata-imperavi-redactor": "~1.0"
     },
     "autoload": {
         "psr-4": {
