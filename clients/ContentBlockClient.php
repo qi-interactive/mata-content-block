@@ -61,5 +61,4 @@ class ContentBlockClient extends SimpleClient {
 
 		return $retVal;
 	}
-
 }

@@ -6,13 +6,9 @@
  * @license http://www.matacms.com/license/
  */
 
-
 use yii\db\Schema;
 use yii\db\Migration;
 
-/**
- * @author Dmitry Erofeev <dmeroff@gmail.com
- */
 class m150223_181315_init extends Migration {
 
 	public function safeUp() {

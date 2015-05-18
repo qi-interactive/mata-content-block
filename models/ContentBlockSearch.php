@@ -17,9 +17,7 @@ use matacms\contentblock\models\ContentBlock;
  * ContentBlockSearch represents the model behind the search form about `mata\contentblock\models\ContentBlock`.
  */
 class ContentBlockSearch extends ContentBlock {
-    /**
-     * @inheritdoc
-     */
+
     public function rules() {
         return [
             [['Id'], 'integer'],
@@ -27,9 +25,6 @@ class ContentBlockSearch extends ContentBlock {
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();

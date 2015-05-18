@@ -20,9 +20,7 @@ use mata\arhistory\behaviors\HistoryBehavior;
  * @property string $Region
  */
 class ContentBlock extends \matacms\db\ActiveRecord {
-    /**
-     * @inheritdoc
-     */
+
     public static function tableName() {
         return 'mata_contentblock';
     }
@@ -33,9 +31,6 @@ class ContentBlock extends \matacms\db\ActiveRecord {
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules() {
         return [
             [['Title', 'Text'], 'string'],
@@ -44,9 +39,6 @@ class ContentBlock extends \matacms\db\ActiveRecord {
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels() {
         return [
             'Id' => 'ID',
