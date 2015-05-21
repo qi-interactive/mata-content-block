@@ -30,6 +30,12 @@ Content Block Client extends [`matacms\clients`](https://github.com/qi-interacti
 In addition, it exposes the following methods: 
 
 ```php
+public function findByRegion($region) {}
+```
+Returns ContentBlock entity with specified Region.
+
+
+```php
 public function getText($region) {}
 ```
 Returns ContentBlock::Text for a given region. If the model is not found, and ContentBlockClient::safeMode is set to false an exception will be thrown. Otherwise an 'HttpException' will be thrown.
@@ -50,7 +56,8 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 Changelog
 ---------
 
-## Future release
+## 1.0.2-alpha, May 21, 2015
+- Updated Content Block Client
 - Updated installation notes
 
 ## 1.0.1-alpha, May 18, 2015
