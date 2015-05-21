@@ -18,7 +18,7 @@ Installation
 
 -  Run migrations
 ```
-php yii migrate/up vendor/matacms/matacms-content-block/migrations
+php yii migrate/up --migrationPath=@vendor/matacms/matacms-content-block/migrations
 ```
 
 
@@ -28,6 +28,12 @@ Client
 Content Block Client extends [`matacms\clients`](https://github.com/qi-interactive/matacms-base/blob/development/clients/SimpleClient.php). 
 
 In addition, it exposes the following methods: 
+
+```php
+public function findByRegion($region) {}
+```
+Returns ContentBlock entity with specified Region.
+
 
 ```php
 public function getText($region) {}
@@ -49,6 +55,10 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 
 Changelog
 ---------
+
+## 1.0.2-alpha, May 21, 2015
+- Updated Content Block Client
+- Updated installation notes
 
 ## 1.0.1-alpha, May 18, 2015
 - Added standard mata headers in PHP files

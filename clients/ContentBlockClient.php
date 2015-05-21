@@ -23,6 +23,12 @@ class ContentBlockClient extends SimpleClient {
 
 	private $_regionToFind;
 
+	public function findByRegion($region) {
+		return $this->findByAttributes([
+			"Region" => $region
+		]);
+	}
+
 	public function getText($region) {
 
 		// the only way we can pass parameters to the closure below
