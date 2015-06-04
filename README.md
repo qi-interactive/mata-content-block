@@ -56,6 +56,9 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 Changelog
 ---------
 
+## 1.0.3-alpha, June 4, 2015
+- Updated composer.json
+
 ## 1.0.2-alpha, May 21, 2015
 - Updated Content Block Client
 - Updated installation notes
