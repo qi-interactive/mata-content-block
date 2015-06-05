@@ -30,10 +30,12 @@ $isRearrangable = isset($this->context->actions()['rearrange']);
                 <?php endif; ?>
 
                 <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-<!--                 <div class="elements">
+                
+                <?php if (YII_DEBUG): ?>
+                <div class="elements">
                     <?= Html::a(sprintf('Create %s', Yii::$app->controller->getModel()->getModelLabel()), ['create'], ['class' => 'btn btn-success']) ?>
-                </div> -->
+                </div>
+                <?php endif; ?>
             </div>
             <div class="search-container"> 
                 <div class="search-input-container">
