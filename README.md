@@ -56,6 +56,9 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 Changelog
 ---------
 
+## 1.0.4-alpha, June 11, 2015
+- Removed create and delete buttons from Production (!YII_DEBUG)
+
 ## 1.0.3-alpha, June 4, 2015
 - Updated composer.json
 
