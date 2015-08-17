@@ -10,6 +10,9 @@
     "require": {
         "mata/mata-imperavi-redactor": "~1.0.0"
     },
+    "require-dev": {
+        "mata/mata-imperavi-redactor": "dev-development"
+    },
     "autoload": {
         "psr-4": {
             "matacms\\contentblock\\": ["../../../mata-cms/modules/matacms/matacms-content-block", ""]
