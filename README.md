@@ -4,13 +4,13 @@ MATA CMS Content Block
 ![MATA CMS Module](https://s3-eu-west-1.amazonaws.com/qi-interactive/assets/mata-cms/gear-mata-logo%402x.png)
 
 
-Content Block module allows adding blocks of HTML code into a web page. 
+Content Block module allows adding blocks of HTML code into a web page.
 
 
 Installation
 ------------
 
-- Add the module using composer: 
+- Add the module using composer:
 
 ```json
 "matacms/matacms-content-block": "~1.0.0"
@@ -25,9 +25,9 @@ php yii migrate/up --migrationPath=@vendor/matacms/matacms-content-block/migrati
 Client
 ------
 
-Content Block Client extends [`matacms\clients`](https://github.com/qi-interactive/matacms-base/blob/development/clients/SimpleClient.php). 
+Content Block Client extends [`matacms\clients`](https://github.com/qi-interactive/matacms-base/blob/development/clients/SimpleClient.php).
 
-In addition, it exposes the following methods: 
+In addition, it exposes the following methods:
 
 ```php
 public function findByRegion($region) {}
@@ -55,6 +55,9 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 
 Changelog
 ---------
+
+## 1.0.4.1-alpha, September 18, 2015
+- Added migration for matacms-language support
 
 ## 1.0.4-alpha, June 11, 2015
 - Removed create and delete buttons from Production (!YII_DEBUG)
