@@ -12,7 +12,7 @@ use yii\db\Migration;
 class m150917_174000_add_language_column extends Migration {
 
 	public function safeUp() {
-		$this->addColumn('{{%mata_contentblock}}', 'Language', 'char(5) NULL');
+		$this->addColumn('{{%mata_contentblock}}', 'Language', 'varchar(16) NULL');
 	}
 
 	public function safeDown() {
