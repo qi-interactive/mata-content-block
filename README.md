@@ -56,6 +56,12 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 Changelog
 ---------
 
+## 1.0.4.3-alpha, September 21, 2015
+- Updated migration for matacms-language support
+
+## 1.0.4.2-alpha, September 21, 2015
+- Updated migration for matacms-language support
+
 ## 1.0.4.1-alpha, September 18, 2015
 - Added migration for matacms-language support
 
