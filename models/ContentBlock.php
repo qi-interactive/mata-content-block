@@ -18,6 +18,7 @@ use mata\arhistory\behaviors\HistoryBehavior;
  * @property string $Title
  * @property string $Text
  * @property string $Region
+ * @property string $Language
  */
 class ContentBlock extends \matacms\db\ActiveRecord {
 
@@ -35,7 +36,8 @@ class ContentBlock extends \matacms\db\ActiveRecord {
         return [
             [['Title', 'Text'], 'string'],
             [['Region'], 'required'],
-            [['Region'], 'string', 'max' => 100]
+            [['Region'], 'string', 'max' => 100],
+            [['Language'], 'safe']
         ];
     }
 

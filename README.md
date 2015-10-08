@@ -56,6 +56,9 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 Changelog
 ---------
 
+## 1.0.4.4-alpha, October 8, 2015
+- Added missing Language field
+
 ## 1.0.4.3-alpha, September 21, 2015
 - Updated migration for matacms-language support
 
