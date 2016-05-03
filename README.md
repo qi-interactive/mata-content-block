@@ -56,6 +56,9 @@ Echoes the result of ContentBlockClient::renderText($region). It also removes th
 Changelog
 ---------
 
+## 1.0.4.5-alpha, May 3, 2015
+- Added filterableAttributes() to ContentBlock model (for search functionality)
+
 ## 1.0.4.4-alpha, October 8, 2015
 - Added missing Language field
 

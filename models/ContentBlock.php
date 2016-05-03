@@ -49,4 +49,8 @@ class ContentBlock extends \matacms\db\ActiveRecord {
             'Region' => 'Region',
         ];
     }
+
+    public function filterableAttributes() {
+        return ["Title"];
+    }
 }
